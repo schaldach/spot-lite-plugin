@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório</title>
+    <style>
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            width: auto;  
+            max-height: 200px;
+        }
+
+        #report-photos{
+            width: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #report-photos > img {
+            flex: 1;
+        }
+
+        #divheader{
+            max-height: 200px;
+            padding-left: 10%;
+            flex: 2;
+            margin: auto;
+            font-size: medium;
+            color:navy
+        }
+
+        table, th, td, tr {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        table {
+            margin: auto;
+        }
+
+        th{
+            background-color: rgb(3, 3, 115);
+            color: white;
+            font-size: large;
+            padding: 0 10px;
+        }
+
+        .tb_est{
+            width: 30%;
+        }
+        .tb_idd {
+            width: 20%;
+        }
+        .tb_reg{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img width="168px" src="/img/image.png" alt="Logo univali">
+
+        <div id="divheader">
+            <h3 >FUNDAÇÃO UNIVERSIDADE DO VALE DO ITAJAÍ <br>
+            PROJETO DE EXTENSÃO LITE IS COOL
+            </h3>
+            <!-- <p class="data"></p> é pra isso ser alguma coisa? !-->
+        </div>
+    </header>
+    <main>
+        <h1 id="report-title" style="text-align: center;">{{Nome do titulo}}</h1>   
+         <h3>Relatório geral do encontro:</h3>
+         <p id="report-general-event-description">{{Descrição do relatório}}</p>
+         <h3>Fotos:</h3>
+
+        <!-- Fotos aqui-->
+         <div id="report-photos">
+         </div>
+
+         <h3>Relatório individual:</h3>
+         <table id="report-participants">
+            <tr>
+                <th class="tb_est">Estudante</th>
+                <th class="tb_idd">Idade</th>
+                <th class="tb_reg">Registro</th>
+            </tr>
+            <tr>
+                <td class="tb_est">{{Nome do estudante}}</td>
+                <td class="tb_idd">{{Idade do estudante}}</td>
+                <td class="tb_reg">{{Registro sobre o estudante}}</td>
+            </tr>
+         </table>
+         <button>print PDF</button>
+    </main>
+
+</body>
+</html>
